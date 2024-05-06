@@ -25,7 +25,8 @@ int main (int argc, char *argv[])
     wifiMac.SetType ("ns3::AdhocWifiMac");
 
     // Wi-Fiデバイスのインストール
-    NetDeviceContainer devices = wifi.Install (wifiMac, nodes);
+    NetDeviceContainer devices;
+    devices = wifi.Install (wifiMac, nodes);
 
     // インターネットスタックの有効化
     InternetStackHelper internet;
